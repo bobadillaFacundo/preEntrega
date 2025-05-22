@@ -10,16 +10,31 @@ async function start(args) {
     {
         const product = args[3].slice(9,args[3].length)        
         
-        if (product!=" ")
+        if (product!="")
         {
            await  fetch(`https://fakestoreapi.com/products/${product}`)
             .then(response => response.json())
-            .then(data => console.log(data));
+            .then(d => {
+                
+                const products = 
+                `Producto: ${d.id}
+                Titulo: ${d.title}
+                Price: ${d.price}`
+                console.log(products)
+                })
         } else
         {
             await fetch('https://fakestoreapi.com/products')
             .then(response => response.json())
-            .then(data => console.log(data));
+            .then(data => {
+                data.forEach(d => {
+                     const products = 
+                `Producto: ${d.id}
+                Titulo: ${d.title}
+                Price: ${d.price}`
+                console.log(products)})
+               })
+                
         }
         break
     }
@@ -40,7 +55,13 @@ async function start(args) {
         },
             body: JSON.stringify(product)  
         }).then(response => response.json())
-        .then(data => console.log(data))
+        .then(d => {
+             const products = 
+                `Producto: ${d.id}
+                Titulo: ${d.title}
+                Price: ${d.price}`
+                console.log(products)
+        })
         break
     }
     case "DELETE":
@@ -50,7 +71,13 @@ async function start(args) {
         {
             method: 'DELETE'
         }).then(response => response.json())
-        .then(data => console.log(data))  
+        .then(d=> {
+             const products = 
+                `Producto: ${d.id}
+                Titulo: ${d.title}
+                Price: ${d.price}`
+                console.log(products)
+        })  
         break
     }
         
