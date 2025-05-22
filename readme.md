@@ -1,68 +1,83 @@
-📦 API de Productos
-Este proyecto permite interactuar con una API REST de productos desde la consola usando comandos npm run.
+# 📦 API de Productos
 
-🚀 Requisitos Previos
-Tener Node.js instalado
+Este proyecto permite interactuar con una API REST de productos desde la consola usando comandos `npm run`.
 
-Ejecutar npm install para instalar las dependencias necesarias
+## 🚀 Requisitos Previos
 
-📘 Comandos Disponibles
-🔍 Consultar Todos los Productos
+- Tener Node.js instalado
+- Ejecutar `npm install` para instalar las dependencias necesarias
+
+---
+
+## 📘 Comandos Disponibles
+
+### 🔍 Consultar Todos los Productos
+
 Ejecuta el siguiente comando para obtener la lista completa de productos:
 
-bash
-Copy
-Edit
+```bash
 npm run start GET products
-Este comando realiza una petición GET a la API y muestra todos los productos en la consola.
+```
 
-🔎 Consultar un Producto Específico
-Ejecuta el siguiente comando reemplazando <productId> por el ID del producto que deseas consultar:
+Este comando realiza una petición `GET` a la API y muestra todos los productos en la consola.
 
-bash
-Copy
-Edit
+---
+
+### 🔎 Consultar un Producto Específico
+
+Ejecuta el siguiente comando reemplazando `<productId>` por el ID del producto que deseas consultar:
+
+```bash
 npm run start GET products/<productId>
-Ejemplo:
+```
 
-bash
-Copy
-Edit
+**Ejemplo:**
+
+```bash
 npm run start GET products/15
-Este comando realiza una petición GET para obtener los detalles de un producto específico.
+```
 
-🆕 Crear un Producto Nuevo
-Ejecuta el siguiente comando con los datos del nuevo producto (<title>, <price>, <category>) como parámetros:
+Este comando realiza una petición `GET` para obtener los detalles de un producto específico.
 
-bash
-Copy
-Edit
+---
+
+### 🆕 Crear un Producto Nuevo
+
+Ejecuta el siguiente comando con los datos del nuevo producto (`<title>`, `<price>`, `<category>`) como parámetros:
+
+```bash
 npm run start POST products <title> <price> <category>
-Ejemplo:
+```
 
-bash
-Copy
-Edit
+**Ejemplo:**
+
+```bash
 npm run start POST products "Monitor LED" 199.99 "Electrónica"
-Esto enviará una petición POST a la API para crear un nuevo producto con los valores proporcionados y mostrará el resultado en la consola.
+```
 
-❌ Eliminar un Producto
-Ejecuta el siguiente comando reemplazando <productId> por el ID del producto a eliminar:
+Esto enviará una petición `POST` a la API para crear un nuevo producto con los valores proporcionados y mostrará el resultado en la consola.
 
-bash
-Copy
-Edit
+---
+
+### ❌ Eliminar un Producto
+
+Ejecuta el siguiente comando reemplazando `<productId>` por el ID del producto a eliminar:
+
+```bash
 npm run start DELETE products/<productId>
-Ejemplo:
+```
 
-bash
-Copy
-Edit
+**Ejemplo:**
+
+```bash
 npm run start DELETE products/15
-Este comando realiza una petición DELETE para eliminar el producto correspondiente y muestra la respuesta en la consola.
+```
 
-🛠️ Notas
-Asegúrate de que el servidor backend esté corriendo antes de ejecutar los comandos.
+Este comando realiza una petición `DELETE` para eliminar el producto correspondiente y muestra la respuesta en la consola.
 
-Los parámetros deben estar correctamente formateados para evitar errores.
+---
 
+## 🛠️ Notas
+
+- Asegúrate de que el servidor backend esté corriendo antes de ejecutar los comandos.
+- Los parámetros deben estar correctamente formateados para evitar errores.
